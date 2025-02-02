@@ -1,0 +1,36 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$spring-to-quarkus-frontend-primary: mat.define-palette(mat.$blue-grey-palette);
+$spring-to-quarkus-frontend-accent: mat.define-palette(mat.$cyan-palette);
+$spring-to-quarkus-frontend-theme: mat.define-light-theme((
+  color: (
+    primary: $spring-to-quarkus-frontend-primary,
+    accent: $spring-to-quarkus-frontend-accent,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+@include mat.all-component-themes($spring-to-quarkus-frontend-theme);
+
+@import "https://fonts.googleapis.com/css2?family=Kreon:wght@700&family=Roboto:wght@400;700;900&display=swap";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppings", sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+:root {
+    --app-white: #ebf4f5;
+    --app-light-green: #9bc8cd;
+    --app-green: #56a2a7;
+    --app-dark-green: #2e575a;
+}

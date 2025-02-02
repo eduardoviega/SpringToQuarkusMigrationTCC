@@ -1,0 +1,74 @@
+<section class="body-section">
+    <header>
+        <div></div>
+        <h2>Ferramenta de Migração</h2>
+        <div class="select-area">
+            <ng-container *ngTemplateOutlet="selectPromptTechnique"></ng-container>
+        </div>
+    </header>
+
+    <section class="content-section">
+        <div class="left-files">
+            <div class='file'>
+                <label for='input-file' [ngClass]="{ 'file-active': selectedFiles.length > 0 }">
+                    Incluir Arquivos
+                </label>
+                <input id='input-file' type='file' multiple (change)="onFileChange($event)" />
+            </div>
+            <ul class="file-list" *ngIf="selectedFiles.length > 0">
+                <li *ngFor="let file of selectedFiles" (click)="selectFile(file, false)"
+                    [ngClass]="{ 'item-selecionado': selectedFile?.file == file }">
+                    {{ file.name }}
+                </li>
+            </ul>
+        </div>
+        <div class="central-area">
+            <div class="code-area">
+                <label *ngIf="!selectedFile && !migratedFile">Selecione um arquivo para visualizar</label>
+                <code class="code" *ngIf="selectedFile">{{ selectedFile.content }}</code>
+                <code class="code" *ngIf="migratedFile" [ngClass]="{'markdown-container': migratedFile.file.name.includes('.md')}">
+                    <div *ngIf="migratedFile.file.name.includes('.md'); else elseTemplate" style="padding-left: 20px">
+                        <markdown [data]="migratedFile.content"></markdown>
+                    </div>
+                    <ng-template #elseTemplate>{{migratedFile.content}}</ng-template>
+                </code>
+            </div>
+            <div class="action-area">
+                <div class="logo">
+                    <img src="../../../assets/images/logo-spring.png" alt="logo-spring">
+                </div>
+                <div class="realizar-acao" (click)="onSubmit()">
+                    <button>Migrar</button>
+                </div>
+                <div class="logo">
+                    <img src="../../../assets/images/logo-quarkus.png" alt="logo-quarkus">
+                </div>
+            </div>
+        </div>
+        <div class="right-files">
+            <div class='file' *ngIf="migratedFiles.length > 0">
+                <label class="file-active" style="cursor: default !important">Arquivos Migrados</label>
+            </div>
+
+            <label *ngIf="migratedFiles.length == 0">Nenhum arquivo migrado</label>
+
+            <ul class="file-list" *ngIf="migratedFiles.length > 0">
+                <li *ngFor="let file of migratedFiles" (click)="selectFile(file, true)"
+                    [ngClass]="{ 'item-selecionado': migratedFile?.file == file }">
+                    {{ file.name }}
+                </li>
+            </ul>
+        </div>
+    </section>
+</section>
+
+<ng-template #selectPromptTechnique>
+    <mat-form-field appearance="outline">
+        <mat-label>Técnica de Prompt</mat-label>
+        <mat-select [(value)]="selectedPromptTechnique">
+            <mat-option *ngFor="let technique of promptTechniques" [value]="technique">
+                {{ technique.techniqueName }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</ng-template>
