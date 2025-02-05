@@ -54,3 +54,13 @@ npm install
 ```sh
 ng serve
 ```
+
+## Prompts e Resultados
+
+Os prompts de cada técnica utilizada podem ser encontrados na pasta do caminho abaixo: 
+
+```./spring-to-quarkus-backend/prompts```
+
+E os resultados da aplicação dos prompts podem ser encontrados na pasta do caminho abaixo: 
+
+```./spring-to-quarkus-backend/resultados-prompts```
