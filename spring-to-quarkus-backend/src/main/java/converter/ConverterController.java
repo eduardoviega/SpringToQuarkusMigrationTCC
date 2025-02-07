@@ -45,7 +45,7 @@ public class ConverterController {
         Map<String, Object> responseFormat = createResponseFormat(fileProperties);
 
         String response = callOpenAI(chatContext, responseFormat);
-        // String response = RespostasTecnicas.getProjectResponseById(promptId);
+        // String response = RespostasTecnicasEnum.getProjectResponseById(promptId);
         // System.out.println(response);
         return Response.ok(response).build();
     }

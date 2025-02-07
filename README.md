@@ -10,14 +10,14 @@ Este repositório contém a ferramenta de migração automatizada de projetos Sp
 A ferramenta recebe arquivos de código fonte de projetos Spring e utiliza o modelo de IA GPT-4o para gerar sugestões de converção dos arquivos no formato adequado para Quarkus. O usuário pode visualizar os arquivos migrados e escolher entre diferentes técnicas de engenharia de prompt para otimizar a conversão. 
 
 ## Interface da Ferramenta
-![Interface da Ferramenta](./Interface%20Ferramenta.png)
+![Interface da Ferramenta](./assets/Interface%20Ferramenta.png)
 
 
 ## Interface da Ferramenta Preenchida
-![Interface da Ferramenta Preenchida](./Interface%20Ferramenta%20Preenchida.png)
+![Interface da Ferramenta Preenchida](./assets/Interface%20Ferramenta%20Preenchida.png)
 
 ## Diagrama de Contexto
-![Diagrama de Contexto](./Diagrama%20de%20Contexto.jpeg)
+![Diagrama de Contexto](./assets/Diagrama%20de%20Contexto.jpeg)
 
 ## Instalação e Execução
 
@@ -57,10 +57,10 @@ ng serve
 
 ## Prompts e Resultados
 
-Os prompts de cada técnica utilizada podem ser encontrados na pasta do caminho abaixo: 
+- Os prompts de cada técnica utilizada podem ser encontrados pelo caminho abaixo: 
 
-```./spring-to-quarkus-backend/prompts```
+    ```./spring-to-quarkus-backend/prompts```
 
-E os resultados da aplicação dos prompts podem ser encontrados na pasta do caminho abaixo: 
+- Os resultados da aplicação dos prompts podem ser utilizados na ferramenta pelo enum RespostasTecnicasEnum e também podem ser encontrados pelo caminho abaixo: 
 
-```./spring-to-quarkus-backend/resultados-prompts```
+    ```./experimentos/resultados-prompts```
