@@ -2,7 +2,7 @@
 Este repositório contém a ferramenta de migração automatizada de projetos Spring para Quarkus, desenvolvida como parte do Trabalho de Conclusão de Curso (TCC) em Engenharia de Software. O objetivo da ferramenta é após o uso dela, poder avaliar técnicas de engenharia de prompt na conversão de código utilizando inteligência artificial. O repositório abrange tanto o frontend (Angular) quanto o backend (Quarkus).
 
 ## Tecnologias Utilizadas
-- **Frontend**: Angular 17.3.8.
+- **Frontend**: Angular 17.3.0.
 - **Backend**: Quarkus 3.13.0 - Java 21.
 - **API de IA**: OpenAI com o modelo GPT-4o.
 
@@ -56,6 +56,8 @@ ng serve
 ```
 
 ## Prompts e Resultados
+
+Para chegar nos resultados, foram enviados para a ferramenta os arquivos das classes java, o arquivo application.properties e o arquivo pom.xml.
 
 - Os prompts de cada técnica utilizada podem ser encontrados pelo caminho abaixo: 
 
