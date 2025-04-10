@@ -1,6 +1,8 @@
 # Avaliação de Técnicas de Engenharia de Prompt na Migração de Framework Backend
 Este repositório contém a ferramenta de migração automatizada de projetos Spring para Quarkus, desenvolvida como parte do Trabalho de Conclusão de Curso (TCC) em Engenharia de Software. O objetivo da ferramenta é após o uso dela, poder avaliar técnicas de engenharia de prompt na conversão de código utilizando inteligência artificial. O repositório abrange tanto o frontend (Angular) quanto o backend (Quarkus).
 
+![Descrição do GIF](assets/Animação.gif)
+
 ## Tecnologias Utilizadas
 - **Frontend**: Angular 17.3.0.
 - **Backend**: Quarkus 3.13.0 - Java 21.
